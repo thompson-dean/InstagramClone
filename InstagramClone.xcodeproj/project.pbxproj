@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2DE6AE286EF59B002F51BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DE6AD286EF59B002F51BC /* GoogleService-Info.plist */; };
+		2A2DE6B1286EF8DB002F51BC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */; };
+		2A2DE6B3286EF970002F51BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B2286EF970002F51BC /* AuthManager.swift */; };
+		2A2DE6B5286EF9B1002F51BC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */; };
 		2AFF769F286C872C005F88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF769E286C872C005F88AF /* AppDelegate.swift */; };
 		2AFF76A1286C872C005F88AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF76A0286C872C005F88AF /* SceneDelegate.swift */; };
 		2AFF76A3286C872C005F88AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF76A2286C872C005F88AF /* HomeViewController.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2DE6AD286EF59B002F51BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		2A2DE6B2286EF970002F51BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		2AFF769B286C872C005F88AF /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFF769E286C872C005F88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AFF76A0286C872C005F88AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,21 @@
 				8171A0A084A72B6615AA10A5 /* Pods_InstagramClone.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A2DE6AF286EF833002F51BC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				2AFF76C6286C8AC1005F88AF /* PostViewController.swift */,
+				2AFF76CA286C8AF7005F88AF /* SettingsViewController.swift */,
+				2AFF76D0286C8B25005F88AF /* SearchResultViewController.swift */,
+				2AFF76CC286C8B01005F88AF /* ListViewController.swift */,
+				2AFF76C8286C8AE6005F88AF /* EditProfileViewController.swift */,
+				2AFF76CE286C8B18005F88AF /* SearchViewController.swift */,
+				2AFF76D4286C8B62005F88AF /* PublishPostViewController.swift */,
+				2AFF76D2286C8B4C005F88AF /* PostEditorViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		2AFF7692286C872C005F88AF = {
@@ -131,6 +154,10 @@
 			children = (
 				2AFF769E286C872C005F88AF /* AppDelegate.swift */,
 				2AFF76A0286C872C005F88AF /* SceneDelegate.swift */,
+				2A2DE6AD286EF59B002F51BC /* GoogleService-Info.plist */,
+				2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */,
+				2A2DE6B2286EF970002F51BC /* AuthManager.swift */,
+				2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,15 +193,8 @@
 		2AFF76C0286C8A8B005F88AF /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				2A2DE6AF286EF833002F51BC /* General */,
 				2AFF76C1286C8A90005F88AF /* Onboarding */,
-				2AFF76C6286C8AC1005F88AF /* PostViewController.swift */,
-				2AFF76CA286C8AF7005F88AF /* SettingsViewController.swift */,
-				2AFF76D0286C8B25005F88AF /* SearchResultViewController.swift */,
-				2AFF76CC286C8B01005F88AF /* ListViewController.swift */,
-				2AFF76C8286C8AE6005F88AF /* EditProfileViewController.swift */,
-				2AFF76CE286C8B18005F88AF /* SearchViewController.swift */,
-				2AFF76D4286C8B62005F88AF /* PublishPostViewController.swift */,
-				2AFF76D2286C8B4C005F88AF /* PostEditorViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -194,7 +214,6 @@
 				3F8A8D215A84B831914725FE /* Pods-InstagramClone.debug.xcconfig */,
 				A330FBAB59DE441D3DEE867E /* Pods-InstagramClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,6 +280,7 @@
 				2AFF76AB286C872D005F88AF /* LaunchScreen.storyboard in Resources */,
 				2AFF76A8286C872D005F88AF /* Assets.xcassets in Resources */,
 				2AFF76A6286C872C005F88AF /* Main.storyboard in Resources */,
+				2A2DE6AE286EF59B002F51BC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +340,15 @@
 				2AFF76A3286C872C005F88AF /* HomeViewController.swift in Sources */,
 				2AFF76C5286C8AAE005F88AF /* RegistrationViewController.swift in Sources */,
 				2AFF76D3286C8B4C005F88AF /* PostEditorViewController.swift in Sources */,
+				2A2DE6B5286EF9B1002F51BC /* StorageManager.swift in Sources */,
 				2AFF76C7286C8AC1005F88AF /* PostViewController.swift in Sources */,
+				2A2DE6B1286EF8DB002F51BC /* DatabaseManager.swift in Sources */,
 				2AFF76BC286C8A47005F88AF /* NotificationsViewController.swift in Sources */,
 				2AFF76D1286C8B25005F88AF /* SearchResultViewController.swift in Sources */,
 				2AFF76C3286C8AA6005F88AF /* LoginViewController.swift in Sources */,
 				2AFF76CF286C8B18005F88AF /* SearchViewController.swift in Sources */,
 				2AFF76BE286C8A53005F88AF /* ProfileViewController.swift in Sources */,
+				2A2DE6B3286EF970002F51BC /* AuthManager.swift in Sources */,
 				2AFF769F286C872C005F88AF /* AppDelegate.swift in Sources */,
 				2AFF76A1286C872C005F88AF /* SceneDelegate.swift in Sources */,
 				2AFF76CD286C8B01005F88AF /* ListViewController.swift in Sources */,
@@ -485,6 +508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,6 +538,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
