@@ -20,15 +20,27 @@ class LoginViewController: UIViewController {
     }()
     
     private let loginButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        button.addTarget(LoginViewController.self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        return button
+    }()
+    
+    private let createAccountButton: UIButton = {
+        let button = UIButton()
+        button.addTarget(LoginViewController.self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        return button
     }()
     
     private let termsButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        button.addTarget(LoginViewController.self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
+        return button
     }()
     
     private let privacyButton: UIButton = {
-        return UIButton()
+        let button = UIButton()
+        button.addTarget(LoginViewController.self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
+        return button
     }()
     
     private let headerView: UIView = {
@@ -38,15 +50,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .red
     }
     
     private func addSubViews() {
         view.addSubview(usernameEmailField)
         view.addSubview(passwordField)
         view.addSubview(loginButton)
+        view.addSubview(createAccountButton)
         view.addSubview(termsButton)
         view.addSubview(privacyButton)
         view.addSubview(headerView)
     }
+    
+    @objc func didTapLoginButton() { }
+    @objc func didTapTermsButton() { }
+    @objc func didTapPrivacyButton() { }
+    @objc func didTapCreateAccountButton() { }
+
 }
