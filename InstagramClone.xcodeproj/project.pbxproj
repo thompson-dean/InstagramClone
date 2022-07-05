@@ -11,6 +11,7 @@
 		2A2DE6B1286EF8DB002F51BC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */; };
 		2A2DE6B3286EF970002F51BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B2286EF970002F51BC /* AuthManager.swift */; };
 		2A2DE6B5286EF9B1002F51BC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */; };
+		2A2DE6B72874373F002F51BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DE6B62874373F002F51BC /* Extensions.swift */; };
 		2AFF769F286C872C005F88AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF769E286C872C005F88AF /* AppDelegate.swift */; };
 		2AFF76A1286C872C005F88AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF76A0286C872C005F88AF /* SceneDelegate.swift */; };
 		2AFF76A3286C872C005F88AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF76A2286C872C005F88AF /* HomeViewController.swift */; };
@@ -39,6 +40,7 @@
 		2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		2A2DE6B2286EF970002F51BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		2A2DE6B62874373F002F51BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2AFF769B286C872C005F88AF /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFF769E286C872C005F88AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AFF76A0286C872C005F88AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				2A2DE6B0286EF8DB002F51BC /* DatabaseManager.swift */,
 				2A2DE6B2286EF970002F51BC /* AuthManager.swift */,
 				2A2DE6B4286EF9B1002F51BC /* StorageManager.swift */,
+				2A2DE6B62874373F002F51BC /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				2AFF76BC286C8A47005F88AF /* NotificationsViewController.swift in Sources */,
 				2AFF76D1286C8B25005F88AF /* SearchResultViewController.swift in Sources */,
 				2AFF76C3286C8AA6005F88AF /* LoginViewController.swift in Sources */,
+				2A2DE6B72874373F002F51BC /* Extensions.swift in Sources */,
 				2AFF76CF286C8B18005F88AF /* SearchViewController.swift in Sources */,
 				2AFF76BE286C8A53005F88AF /* ProfileViewController.swift in Sources */,
 				2A2DE6B3286EF970002F51BC /* AuthManager.swift in Sources */,
