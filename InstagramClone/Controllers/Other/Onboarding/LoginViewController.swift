@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginViewController: UIViewController {
     
@@ -54,7 +55,7 @@ class LoginViewController: UIViewController {
         button.layer.cornerRadius = Constants.cornerRadius
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(LoginViewController.self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
     
@@ -62,7 +63,7 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.setTitleColor(.label, for: .normal)
         button.setTitle("New User? Create an Account", for: .normal)
-        button.addTarget(LoginViewController.self, action: #selector(didTapTermsButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
         return button
     }()
     
@@ -70,7 +71,7 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Terms of Service", for: .normal)
         button.setTitleColor(.secondaryLabel, for: .normal)
-        button.addTarget(LoginViewController.self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapPrivacyButton), for: .touchUpInside)
         return button
     }()
     
@@ -78,7 +79,7 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Privacy Policy", for: .normal)
         button.setTitleColor(.secondaryLabel, for: .normal)
-        button.addTarget(LoginViewController.self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapTermsButton), for: .touchUpInside)
         return button
     }()
     
@@ -105,7 +106,7 @@ class LoginViewController: UIViewController {
         
         headerView.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height / 3)
         
-        usernameEmailField.frame = CGRect(x: 25, y: headerView.bottom + 10, width: view.width - 50, height: 52)
+        usernameEmailField.frame = CGRect(x: 25, y: headerView.bottom + 40, width: view.width - 50, height: 52)
         
         passwordField.frame = CGRect(x: 25, y: usernameEmailField.bottom + 10, width: view.width - 50, height: 52)
         
@@ -148,10 +149,32 @@ class LoginViewController: UIViewController {
         view.addSubview(headerView)
     }
     
-    @objc func didTapLoginButton() { }
-    @objc func didTapTermsButton() { }
-    @objc func didTapPrivacyButton() { }
-    @objc func didTapCreateAccountButton() { }
+    @objc func didTapLoginButton() {
+        passwordField.resignFirstResponder()
+        usernameEmailField.resignFirstResponder()
+        
+        guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
+              let password = passwordField.text, !password.isEmpty, password.count >= 8 else {
+            return
+        }
+    }
+    
+    @objc func didTapTermsButton() {
+        guard let url = URL(string: "https://help.instagram.com/581066165581870") else { return }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+    }
+    
+    @objc func didTapPrivacyButton() {
+        guard let url = URL(string: "https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect") else { return }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+    }
+    
+    @objc func didTapCreateAccountButton() {
+        let vc = RegistrationViewController()
+        present(vc, animated: true)
+    }
 
 }
 
@@ -161,7 +184,7 @@ extension LoginViewController: UITextFieldDelegate {
         if textField == usernameEmailField {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
-            
+            didTapLoginButton()
         }
         return true
     }
