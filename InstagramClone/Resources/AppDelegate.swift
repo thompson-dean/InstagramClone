@@ -5,7 +5,7 @@
 //  Created by Dean Thompson on 2022/06/29.
 //
 
-import Firebase
+import FirebaseCore
 import UIKit
 
 @main

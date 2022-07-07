@@ -21,9 +21,15 @@ public class AuthManager {
                         completion(false)
                         return
                     }
-                    
-                    
-                    
+                    DatabaseManager.shared.insertNewUser(with: email, username: username) { inserted in
+                        if inserted {
+                            print("DEBUG: passsed")
+                            completion(true)
+                        } else {
+                            print("DEBUG: failed")
+                            completion(false)
+                        }
+                    }
                 }
             } else {
                 completion(false)
