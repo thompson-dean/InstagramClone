@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseFirestore
 
 public class DatabaseManager {
     
@@ -28,7 +29,6 @@ public class DatabaseManager {
             } else {
                 print("DEBUG: failed")
                 completion(false)
-                
                 return
             }
         }

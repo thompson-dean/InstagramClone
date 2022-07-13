@@ -14,6 +14,6 @@ pod 'Firebase/Database'
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/Storage'
-pod 'FirebaseFirestoreSwift', '> 7.0-beta'
+pod 'Firebase/Firestore'
 
 end
